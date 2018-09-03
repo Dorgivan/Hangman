@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Forca</title>
+</head>
+<body>
+{%if user.is_authenticated %}
+    <button onclick="location.href='accounts/logout/';">Sair</button>
+    <button onclick="location.href='cadastropalavra/';">Cadastrar Palavra</button>
+    <button onclick="location.href='jogo/';">Jogar</button>
+    <button onclick="location.href='ranking/';">Ranking</button>
+
+{%else%}
+    <button onclick="location.href='cadastro/';">Cadastrar-se</button>
+    <button onclick="location.href='accounts/login/';">Login</button>
+{%endif%}
+</body>
+</html>

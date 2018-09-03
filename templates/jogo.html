@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Forca</title>
+</head>
+<body>
+{%for x in object_list%}
+<div align='center'>
+    {%if x.errors == 0%}
+    <img src="https://github.com/igorgiordan/HangmanDjango/blob/master/images/1.png?raw=true">
+    {%elif x.errors == 1%}
+    <img src="https://github.com/igorgiordan/HangmanDjango/blob/master/images/2.png?raw=true">
+    {%elif x.errors == 2%}
+    <img src="https://github.com/igorgiordan/HangmanDjango/blob/master/images/3.png?raw=true">
+    {%elif x.errors == 3%}
+    <img src="https://github.com/igorgiordan/HangmanDjango/blob/master/images/4.png?raw=true">
+    {%elif x.errors == 4%}
+    <img src="https://github.com/igorgiordan/HangmanDjango/blob/master/images/5.png?raw=true">
+    {%elif x.errors == 5%}
+    <img src="https://github.com/igorgiordan/HangmanDjango/blob/master/images/6.png?raw=true">
+    {%elif x.errors == 6%}
+    <img src="https://github.com/igorgiordan/HangmanDjango/blob/master/images/7.png?raw=true">
+    {%endif%}
+</div>
+<h1>Dica: {{x.word.clue}}</h1>
+<div align='center'>
+    <form method="POST">
+        {% csrf_token %}
+        <input type='hidden' value="{{x.pk}}" name='palavra_id' />
+        <input type="submit" value="Q" name='letra'/>
+        <input type="submit" value="W" name='letra'/>
+        <input type="submit" value="E" name='letra'/>
+        <input type="submit" value="R" name='letra'/>
+        <input type="submit" value="T" name='letra'/>
+        <input type="submit" value="Y" name='letra'/>
+        <input type="submit" value="U" name='letra'/>
+        <input type="submit" value="I" name='letra'/>
+        <input type="submit" value="O" name='letra'/>
+        <input type="submit" value="P" name='letra'/>
+        <br>
+        <H1></H1>
+        <input type="submit" value="A" name='letra'/>
+        <input type="submit" value="S" name='letra'/>
+        <input type="submit" value="D" name='letra'/>
+        <input type="submit" value="F" name='letra'/>
+        <input type="submit" value="G" name='letra'/>
+        <input type="submit" value="H" name='letra'/>
+        <input type="submit" value="J" name='letra'/>
+        <input type="submit" value="K" name='letra'/>
+        <input type="submit" value="L" name='letra'/>
+        <input type="submit" value="Ç" name='letra'/>
+        <br>
+        <h1><h1>
+        <input type="submit" value="Z" name='letra'/>
+        <input type="submit" value="X" name='letra'/>
+        <input type="submit" value="C" name='letra'/>
+        <input type="submit" value="V" name='letra'/>
+        <input type="submit" value="B" name='letra'/>
+        <input type="submit" value="N" name='letra'/>
+        <input type="submit" value="M" name='letra'/>
+    </form>
+
+</div>
+{%endfor%}
+</body>
+</html>

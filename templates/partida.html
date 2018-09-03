@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Forca</title>
+</head>
+<body>
+<h1>Confirme aqui sua partida</h1>
+<form method="POST">
+    {% csrf_token %}
+    <button type="submit">Jogar</button>
+    <!-- <input type="submit" value="Jogar" /> -->
+</form>
+</body>
+</html>

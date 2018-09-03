@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Forca</title>
+</head>
+<body>
+    <h1>Ranking</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Pontuação</th>
+                    <th>Usuário</th>
+                </tr>
+            </thead>
+            {% for x in object_list %}
+            <tbody>
+                <tr>
+                    <td>{{ x.score }}</td>
+                    <td>{{ x.user }}</td>
+                </tr>
+            </tbody>
+    
+            {% empty %}
+            <tbody>
+                    <tr>
+                        <td>Nenhuma Pontuação</td>
+                        <td>Nenhum Usuário</td>
+                    </tr>
+                </tbody>
+        
+            {% endfor %}
+        </table>
+</form>
+</body>
+</html>
